@@ -1,5 +1,5 @@
 export interface SimulacaoRequest {
-  nome: String;
+  nome: string;
   salarioBruto: number;
 }
 export interface SimulacaoResponse {
