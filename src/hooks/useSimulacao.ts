@@ -12,7 +12,10 @@ export function useSimulacao() {
     setError(null);
 
     try {
-      const response = await api.post<SimulacaoResponse>("/simulacao", payload);
+      const response = await api.post<SimulacaoResponse>(
+        "/simulacoes",
+        payload,
+      );
       setSimulacao(response.data);
     } catch (err: unknown) {
       setError(
