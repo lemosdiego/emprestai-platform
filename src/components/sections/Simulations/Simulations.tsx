@@ -16,12 +16,13 @@ export default function Simulations() {
   }
   return (
     <section>
+      <h2>{dados.nome}</h2>
       {dados.planos.map((plano) => (
         <div key={plano.meses}>
           <h2>{plano.meses} meses</h2>
           <p>Valor da parcela: R$ {plano.valorParcela.toFixed(2)}</p>
           <p>Percentual do salário: {plano.percentualSalario.toFixed(2)}%</p>
-          <p>Juros mensal: {plano.jurosMensal.toFixed(2)}%</p>
+          <p>Juros mensal: {Number(plano.jurosMensal).toFixed(2)}%</p>
         </div>
       ))}
     </section>
