@@ -17,6 +17,9 @@ export default function Simulations() {
   return (
     <section>
       <h2>{dados.nome}</h2>
+      <p>Salário líquido: R$ {dados.salarioLiquido.toFixed(2)}</p>
+      <p>Faixa: {dados.faixa}</p>
+      <p>Limite total: R$ {dados.limiteTotal.toFixed(2)}</p>
       {dados.planos.map((plano) => (
         <div key={plano.meses}>
           <h2>{plano.meses} meses</h2>
