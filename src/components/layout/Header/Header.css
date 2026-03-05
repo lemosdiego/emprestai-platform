@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.header {
+  @apply fixed 
+        top-0 
+        left-0 
+        w-full 
+        z-20 
+        transition-all 
+        duration-300
+        flex
+        items-center
+        justify-center;
+}
+.isScrolled__yes {
+  @apply bg-white/90 
+        backdrop-blur-md 
+        shadow-sm
+        p-7
+        max-md:p-4;
+}
+.isScrolled__no {
+  @apply bg-transparent 
+        p-7 
+        max-md:p-4;
+}
+.header__container {
+  @apply w-350
+        flex
+        items-center
+        justify-between
+        
+        max-md:w-full;
+}
+.logo img {
+  @apply w-52
+        max-md:w-32;
+}

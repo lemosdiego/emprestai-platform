@@ -1,64 +1,56 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { TfiMenu, TfiClose } from "react-icons/tfi";
+
+import "./Header.css";
+import NavigationDesktop from "../../ui/Navigation/NavigationDesktop";
+import NavigationMobile from "../../ui/Navigation/NavigationMobile";
+import { useMenu } from "../../../hooks/useMenu";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-
-  // Efeito para mudar o fundo do header ao rolar
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const isHome = location.pathname === "/";
+  const {
+    isScrolled,
+    isMobileMenuOpen,
+    toggleMobileMenu,
+    closeMobileMenu,
+    mobileMenuRef,
+    toggleButtonRef,
+  } = useMenu();
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
-      }`}
+      className={`header ${isScrolled ? "isScrolled__yes" : "isScrolled__no"}`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <Link to="/" className="block group">
-          <div
-            className={`p-2 rounded-xl transition-all duration-300 ${isScrolled ? "" : "bg-white/95 backdrop-blur-md shadow-lg border border-white/20"}`}
-          >
-            <img
-              src="/logosf.png"
-              alt="EmprestAi"
-              className="h-8 w-auto sm:h-10 object-contain"
-            />
-          </div>
-        </Link>
+      <div className="header__container">
+        <a className="logo">
+          <img src="/logosf.png" alt="EmprestAi" />
+        </a>
 
-        {isHome && (
-          <nav className="hidden md:flex gap-8">
-            <a
-              href="#como-funciona"
-              className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
-            >
-              Como funciona
-            </a>
-            <a
-              href="#beneficios"
-              className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
-            >
-              Vantagens
-            </a>
-            <a
-              href="#faq"
-              className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
-            >
-              Dúvidas
-            </a>
-          </nav>
-        )}
+        {/* Navegação para Desktop */}
+        <NavigationDesktop isScrolled={isScrolled} />
+
+        {/* Botão do Menu Mobile (Hambúrguer) - visível apenas em mobile */}
+        <div className="hidden max-md:flex items-center ">
+          <button
+            ref={toggleButtonRef}
+            onClick={toggleMobileMenu}
+            className={`z-50 text-2xl transition-colors duration-300 focus:outline-none ${
+              isMobileMenuOpen
+                ? "text-gray-800"
+                : isScrolled
+                  ? "text-gray-800"
+                  : "text-white"
+            }`}
+            aria-label="Abrir menu"
+          >
+            {isMobileMenuOpen ? <TfiClose /> : <TfiMenu size={35} />}
+          </button>
+        </div>
+
+        {/* Menu de Navegação Mobile (Overlay) */}
+        <NavigationMobile
+          isOpen={isMobileMenuOpen}
+          onClose={closeMobileMenu}
+          menuRef={mobileMenuRef}
+        />
       </div>
     </header>
   );
