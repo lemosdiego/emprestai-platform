@@ -1,38 +1,64 @@
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
+  // Efeito para mudar o fundo do header ao rolar
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isHome = location.pathname === "/";
+
   return (
-    <header className="p-4 bg-[#9b00cf] flex items-center justify-center sticky top-0 z-20 drop-shadow-black font-medium ">
-      <div className="flex items-center justify-between w-350 ">
-        <span className="rounded w-52 bg-white p-2">
-          <img
-            src="/logosf.png"
-            alt="SimulAi"
-            className="w-full h-full rounded"
-          />
-        </span>
-        <nav>
-          <ul className="flex gap-4 text-lg text-white">
-            <li>
-              <a
-                href="https://washington-app.netlify.app/portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#1A001F] transition-colors duration-500"
-              >
-                Meu Portfólio
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/lemosdiego/EmprestAi-spring-api.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#1A001F] transition-colors duration-500"
-              >
-                Repositório
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
+      }`}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <Link to="/" className="block group">
+          <div
+            className={`p-2 rounded-xl transition-all duration-300 ${isScrolled ? "" : "bg-white/95 backdrop-blur-md shadow-lg border border-white/20"}`}
+          >
+            <img
+              src="/logosf.png"
+              alt="EmprestAi"
+              className="h-8 w-auto sm:h-10 object-contain"
+            />
+          </div>
+        </Link>
+
+        {isHome && (
+          <nav className="hidden md:flex gap-8">
+            <a
+              href="#como-funciona"
+              className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
+            >
+              Como funciona
+            </a>
+            <a
+              href="#beneficios"
+              className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
+            >
+              Vantagens
+            </a>
+            <a
+              href="#faq"
+              className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
+            >
+              Dúvidas
+            </a>
+          </nav>
+        )}
       </div>
     </header>
   );
