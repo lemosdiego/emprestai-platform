@@ -16,7 +16,7 @@ export default function NavigationMobile({
     <nav
       ref={menuRef}
       className={`
-        fixed w-[90vw] h-dvh top-0 right-0 bg-white z-40
+        fixed w-[90vw] h-dvh top-0 right-0 bg-white z-20
         flex flex-col items-center justify-center gap-10
         transform transition-transform duration-300 ease-in-out
         md:hidden
