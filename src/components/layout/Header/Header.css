@@ -5,7 +5,7 @@
         top-0 
         left-0 
         w-full 
-        z-20 
+        z-30 
         transition-all 
         duration-300
         flex
@@ -13,7 +13,7 @@
         justify-center;
 }
 .isScrolled__yes {
-  @apply bg-white/90 
+  @apply bg-purple-200/30 
         backdrop-blur-md 
         shadow-sm
         p-7
@@ -34,5 +34,6 @@
 }
 .logo img {
   @apply w-52
+        z-10
         max-md:w-32;
 }

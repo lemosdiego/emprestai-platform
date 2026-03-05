@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+.hero__section {
+  @apply w-full 
+        bg-[url('https://res.cloudinary.com/dkrpmbjml/image/upload/v1772552420/emprestai_ssrjca.jpg')] 
+        bg-cover 
+        bg-center 
+        bg-fixed 
+        bg-no-repeat
+        rounded-bl-full
+        relative;
+}
+.hero-section__container {
+  @apply min-h-screen
+        flex
+        flex-col
+        items-center
+        justify-center
+        gap-3
+        bg-linear-to-br 
+        from-purple-900/95 
+        via-purple-900/80 
+        to-black/60
+        text-center
+                
+        max-sm:p-8
+        max-sm:pt-20
+        max-sm:min-h-[50vh]        
+        
+        max-md:pt-20
+
+        max-md:justify-start;
+}
+.hero-section__container h1 {
+  @apply text-white
+        drop-shadow-lg
+        text-7xl
+        text-shadow-2xs 
+
+        
+        max-sm:text-4xl
+        max-sm:w-full
+        
+        max-md:text-5xl
+        
+        max-md:w-130
+        max-md:flex
+        max-md:flex-col;
+}
+.hero-section__container h1 br {
+}
+.hero-section__container h1 span {
+  @apply text-purple-300
+        max-sm:hidden;
+}
+.hero-section__container p {
+  @apply text-gray-200
+        leading-relaxed
+        text-3xl
+        
+        max-sm:text-xl
+        
+        max-md:text-xl;
+}
+.hero-section__container p br {
+  @apply max-sm:hidden;
+}
+.hero-section__cta {
+  @apply w-125
+        grid
+        grid-cols-2
+        gap-4
+        
+        max-sm:w-[85%]
+        max-sm:gap-1
+        
+        max-md:w-100;
+}
+.hero-section__cta-simular-btn {
+  @apply p-3 
+        bg-linear-to-r 
+        from-purple-600 
+        to-pink-600 
+        hover:from-purple-700 hover:to-pink-700 
+        text-white 
+        text-lg 
+        font-bold 
+        rounded-xl 
+        shadow-lg 
+        transform 
+        transition-all 
+        hover:-translate-y-1 
+        hover:shadow-xl
+        text-center
+
+        max-sm:text-sm
+        
+        max-md:text-base
+        max-md:p-2.5;
+}
+.hero-section__cta-como-funciona-btn {
+  @apply p-3 
+        bg-white/10 
+        backdrop-blur-md 
+        border 
+        border-white/30 
+        hover:bg-white/20 
+        text-white 
+        text-lg 
+        font-bold 
+        rounded-xl 
+        shadow-lg 
+        transition-all
+        hover:-translate-y-1 
+        hover:shadow-xl
+        text-center
+
+        max-sm:text-sm
+        
+        max-md:text-base
+        max-md:p-2.5;
+}
+.hero-section__social-proof {
+  @apply absolute
+        bottom-8 
+        grid
+        grid-cols-3
+        opacity-70
+        w-300
+        text-center
+        
+        max-sm:w-[85%]
+
+        max-md:relative
+        max-md:mt-0.5
+        max-md:bottom-0
+        max-md:grid-cols-1
+        max-md:w-100;
+}
+.hero-section__social-proof-item-1 {
+  @apply p-6;
+}
+.hero-section__social-proof-item-2 {
+  @apply p-6 
+      border-y 
+      md:border-y-0 
+      md:border-x 
+      border-purple-600;
+}
+.hero-section__social-proof-item-1-number {
+  @apply text-4xl 
+      font-extrabold 
+      text-purple-400
+      text-shadow-2xs 
+      mb-2
+      
+      max-sm:text-2xl;
+}
+.hero-section__social-proof-item-1 p,
+.hero-section__social-proof-item-2 p {
+  @apply text-2xl 
+      text-gray-100
+      
+      max-sm:text-lg;
+}
