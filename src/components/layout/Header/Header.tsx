@@ -17,11 +17,14 @@ export default function Header() {
 
   return (
     <header
-      className={`header ${isScrolled ? "isScrolled__yes" : "isScrolled__no"}`}
+      className={`header ${isScrolled ? "isScrolled__yes" : "isScrolled__no"} `}
     >
       <div className="header__container">
         <a className="logo">
-          <img src="/logosf.png" alt="EmprestAi" />
+          <img
+            src={isScrolled ? "/logo1sf.png" : "/logo2sf.png"}
+            alt="EmprestAi"
+          />
         </a>
 
         {/* Navegação para Desktop */}
