@@ -50,7 +50,7 @@
 .benefits-section__text p {
   @apply text-2xl
         mt-3
-        
+        w-[90%]
         max-sm:text-lg
         max-sm:w-full
         
