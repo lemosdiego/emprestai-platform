@@ -1,59 +1,50 @@
-// src/components/sections/HowItWorks/HowItWorks.tsx
+import "./HowItWorks.css";
+import { FaClipboardList, FaBolt, FaMoneyBillWave } from "react-icons/fa";
+
 export default function HowItWorks() {
   const steps = [
     {
       id: 1,
       title: "Simule seu Crédito",
       description:
-        "Preencha o formulário com seus dados básicos e o valor desejado.",
-      icon: "📝",
+        "Informe seus dados básicos e o valor que deseja solicitar. A simulação é rápida, gratuita e não compromete seu score de crédito.",
+      icon: <FaClipboardList size={45} className="text-blue-500" />,
     },
     {
       id: 2,
       title: "Análise Rápida",
       description:
-        "Nossa tecnologia analisa seu perfil em segundos para encontrar a melhor oferta.",
-      icon: "⚡",
+        "Nossa plataforma analisa seu perfil em poucos segundos e busca automaticamente as melhores ofertas disponíveis para você.",
+      icon: <FaBolt size={45} className="text-purple-500" />,
     },
     {
       id: 3,
       title: "Dinheiro na Conta",
       description:
-        "Aprovou? Assine o contrato digital e receba o dinheiro via Pix.",
-      icon: "💰",
+        "Após a aprovação, assine o contrato digital com segurança e receba o valor diretamente na sua conta via Pix.",
+      icon: <FaMoneyBillWave size={45} className="text-green-500" />,
     },
   ];
 
   return (
-    <section id="como-funciona" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-            Como funciona?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Conseguir crédito nunca foi tão simples. Veja como é fácil:
-          </p>
+    <section id="como-funciona" className="howtworks__section">
+      <div className="howtworks__section-container">
+        <div className="howtworks__section-container-title">
+          <h2>Como funciona?</h2>
+          <p>Conseguir crédito nunca foi tão simples. Veja como é fácil:</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Linha conectora (visível apenas em desktop) */}
-          <div className="hidden md:block absolute top-12 left-0 w-full h-1 bg-purple-100 -z-10 transform -translate-y-1/2"></div>
-
+        <div className="howtworks__section-container-steps">
           {steps.map((step) => (
             <div
               key={step.id}
-              className="flex flex-col items-center text-center group"
+              className="howtworks__section-container-steps-item"
             >
-              <div className="w-24 h-24 bg-purple-600 rounded-full flex items-center justify-center text-4xl mb-6 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform duration-300 relative z-10 border-4 border-white">
+              <span className="howtworks__section-container-steps-icon">
                 {step.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {step.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {step.description}
-              </p>
+              </span>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
             </div>
           ))}
         </div>
