@@ -1,0 +1,121 @@
+@import "tailwindcss";
+.benefits__section {
+  @apply p-20 
+        bg-purple-100/50 
+        bg-linear-to-l 
+        from-purple-200/50 
+        to-purple-50
+        flex
+        items-center
+        justify-center
+        
+        max-sm:p-0
+        
+        max-md:p-0
+        
+        max-lg:p-10
+        
+        max-xl:p-12;
+}
+.benefits-section__container {
+  @apply grid
+        grid-cols-2
+        w-full
+        
+        max-sm:pb-8
+        
+        max-md:pb-10
+        
+        max-lg:grid-cols-1;
+}
+.benefits-section__text {
+  @apply flex
+        flex-col
+        justify-center
+        p-14
+        
+        max-sm:p-8
+        
+        max-md:p-10
+        
+        max-lg:p-0
+        
+        max-xl:p-12;
+}
+.benefits-section__text h2 {
+  @apply text-4xl
+  
+        max-sm:text-3xl;
+}
+.benefits-section__text p {
+  @apply text-2xl
+        mt-3
+        
+        max-sm:text-lg
+        max-sm:w-full
+        
+        max-lg:text-xl
+        max-lg:w-4/5;
+}
+.benefits-section__text a {
+  @apply text-xl
+        mt-3
+        text-purple-600 
+        font-bold 
+        hover:text-purple-800 transition-colors 
+        flex 
+        items-center 
+        gap-2;
+}
+.benefits-section__itens {
+  @apply grid
+        grid-cols-2
+        gap-5
+        
+        max-sm:grid-cols-1
+                
+        max-lg:mt-5;
+}
+.benefits-section__item {
+  @apply bg-white 
+        p-8
+        rounded
+        shadow-sm 
+        hover:shadow-md 
+        transition-shadow 
+        border 
+        border-gray-100
+        flex
+        flex-col
+        items-start
+        justify-center
+        
+        max-sm:p-8
+        
+        max-lg:p-8
+        
+        max-xl:p-5;
+}
+.benefits-section__icon {
+  @apply bg-purple-100 
+        rounded-lg
+        p-3 
+        shadow 
+        text-green-500 
+        font-bold 
+        text-xl;
+}
+.benefits-section__item h3 {
+  @apply text-2xl
+        font-bold
+        text-gray-900
+        mt-4;
+}
+.benefits-section__item p {
+  @apply text-purple-950
+        text-lg
+        font-medium
+        mt-2
+        
+        max-sm:w-[90%];
+}
