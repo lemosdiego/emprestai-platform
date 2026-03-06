@@ -1,11 +1,10 @@
 @import "tailwindcss";
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
 }
-
-.logo {
-  font-family: "Exo 2", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+section {
+  scroll-margin-top: 100px;
 }
