@@ -16,7 +16,7 @@
         flex-col
         items-center
         justify-center
-        gap-3
+        gap-2
         bg-linear-to-br 
         from-purple-900/95 
         via-purple-900/80 
@@ -27,40 +27,45 @@
         max-sm:pt-20
         max-sm:min-h-[50vh]        
         
+        max-lg:p-9
         max-md:pt-20
-
-        max-md:justify-start;
+        
+        max-lg:min-h-[70vh]
+        max-lg:justify-start
+        max-lg:pt-32
+        
+        max-xl:min-h-[95vh];
 }
 .hero-section__container h1 {
   @apply text-white
         drop-shadow-lg
-        text-7xl
+        text-6xl
         text-shadow-2xs 
-
         
-        max-sm:text-4xl
-        max-sm:w-full
+        max-md:text-4xl
+        max-md:w-full
         
-        max-md:text-5xl
+        max-lg:text-4xl 
+        max-lg:w-170
         
-        max-md:w-130
-        max-md:flex
-        max-md:flex-col;
+        max-xl:text-5xl
+        max-xl:w-250;
 }
 .hero-section__container h1 br {
 }
 .hero-section__container h1 span {
-  @apply text-purple-300
-        max-sm:hidden;
+  @apply text-purple-300;
 }
 .hero-section__container p {
   @apply text-gray-200
         leading-relaxed
         text-3xl
         
-        max-sm:text-xl
+        max-md:text-xl
         
-        max-md:text-xl;
+        max-lg:text-xl
+        
+        max-xl:text-2xl;
 }
 .hero-section__container p br {
   @apply max-sm:hidden;
@@ -74,7 +79,9 @@
         max-sm:w-[85%]
         max-sm:gap-1
         
-        max-md:w-100;
+        max-md:w-100
+        
+        max-lg:w-140;
 }
 .hero-section__cta-simular-btn {
   @apply p-3 
@@ -95,8 +102,8 @@
 
         max-sm:text-sm
         
-        max-md:text-base
-        max-md:p-2.5;
+        max-lg:text-base
+        max-lg:p-2.5;
 }
 .hero-section__cta-como-funciona-btn {
   @apply p-3 
@@ -117,8 +124,8 @@
 
         max-sm:text-sm
         
-        max-md:text-base
-        max-md:p-2.5;
+        max-lg:text-base
+        max-lg:p-2.5;
 }
 .hero-section__social-proof {
   @apply absolute
@@ -135,7 +142,11 @@
         max-md:mt-0.5
         max-md:bottom-0
         max-md:grid-cols-1
-        max-md:w-100;
+        max-md:w-130
+        
+        max-lg:w-150
+        
+        max-xl:w-200;
 }
 .hero-section__social-proof-item-1 {
   @apply p-6;
@@ -154,12 +165,12 @@
       text-shadow-2xs 
       mb-2
       
-      max-sm:text-2xl;
+      max-xl:text-2xl;
 }
 .hero-section__social-proof-item-1 p,
 .hero-section__social-proof-item-2 p {
   @apply text-2xl 
       text-gray-100
       
-      max-sm:text-lg;
+      max-xl:text-lg;
 }
