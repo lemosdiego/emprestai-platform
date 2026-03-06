@@ -16,11 +16,11 @@ export default function NavigationMobile({
     <nav
       ref={menuRef}
       className={`
-        fixed w-[90vw] h-dvh top-0 right-0 bg-white z-20
+        fixed w-[85vw] h-dvh top-0 left-0 bg-purple-100 z-20
         flex flex-col items-center justify-center gap-10
         transform transition-transform duration-300 ease-in-out
         md:hidden
-        ${isOpen ? "translate-x-0" : "translate-x-full"}
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}
       aria-hidden={!isOpen}
     >
