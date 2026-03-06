@@ -1,0 +1,90 @@
+@import "tailwindcss";
+.faq__section {
+  @apply bg-linear-to-br
+        from-indigo-50
+        via-purple-50
+        to-white
+        p-20
+        flex
+        items-center
+        justify-center
+        
+        max-sm:p-8
+        
+        max-md:p-10
+        
+        max-lg:p-12
+        
+        max-xl:p-14;
+}
+.faq-section__container {
+  @apply text-center
+        w-270
+
+        max-sm:w-full
+        
+        max-md:w-140
+        
+        max-lg:w-170
+        
+        max-xl:w-200;
+}
+.faq-section__container h2 {
+  @apply text-purple-950
+        text-4xl
+        font-medium
+        mb-8
+        
+        max-md:text-3xl
+        max-md:mb-5
+        
+        max-lg:mb-7
+        
+        max-xl:mb-8;
+}
+.faq-section__faqs {
+  @apply space-y-2;
+}
+.faq-section__faq {
+  @apply border 
+        border-gray-200 
+        rounded-lg 
+        overflow-hidden;
+}
+.faq-section__faq-button {
+  @apply w-full 
+        flex 
+        justify-between 
+        items-center 
+        p-5
+        bg-gray-50 
+        hover:bg-gray-100 
+        transition-colors 
+        text-left
+        cursor-pointer
+        
+        max-sm:p-3
+        
+        max-md:p-4;
+}
+.faq-section__faq-question {
+  @apply font-bold
+        text-xl
+        text-gray-900
+        
+        max-md:text-lg;
+}
+.faq-section__faq-answer {
+  @apply p-5 
+        bg-white 
+        text-gray-600 
+        border-t 
+        border-gray-200
+        text-left
+        text-lg
+        
+        max-sm:p-3
+
+        max-md:p-4
+        max-md:text-base;
+}
