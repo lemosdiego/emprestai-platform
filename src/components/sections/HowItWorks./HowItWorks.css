@@ -1,0 +1,79 @@
+@import "tailwindcss";
+.howtworks__section {
+  @apply bg-white;
+}
+.howtworks__section-container {
+  @apply p-20
+        flex
+        flex-col
+        items-center
+        justify-center
+        max-sm:w-full
+        
+        max-sm:p-7
+        
+        max-md:p-8
+        
+        max-lg:p-10
+        
+        max-xl:p-14;
+}
+.howtworks__section-container-title {
+  @apply text-center
+
+        max-sm:w-full
+        
+        max-md:w-130;
+}
+.howtworks__section-container-title h2 {
+  @apply text-gray-900 
+        font-medium
+        text-4xl
+        
+        max-md:text-3xl;
+}
+.howtworks__section-container-title p {
+  @apply text-gray-600
+        text-xl
+        mt-1
+        
+        max-md:text-xl;
+}
+.howtworks__section-container-steps {
+  @apply w-300
+        grid
+        grid-cols-3
+        gap-4
+        mt-10
+
+        max-sm:grid-cols-1
+        max-sm:w-full
+        
+        max-md:grid-cols-2
+        max-md:w-130
+        
+        max-lg:w-185
+        
+        max-xl:w-250;
+}
+.howtworks__section-container-steps-item {
+  @apply grid
+        text-center
+        gap-1
+        grid-rows-[auto_auto_1fr]
+        justify-items-center;
+}
+.howtworks__section-container-steps-icon {
+  @apply border-4
+        border-purple-900
+        p-5
+        rounded-full;
+}
+.howtworks__section-container-steps-item h3 {
+  @apply text-2xl
+        font-medium;
+}
+.howtworks__section-container-steps-item p {
+  @apply text-lg
+        font-light;
+}
