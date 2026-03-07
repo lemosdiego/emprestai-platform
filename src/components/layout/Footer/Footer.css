@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+.footer {
+  @apply flex
+        flex-col
+        items-center
+        justify-center
+        bg-purple-950
+        px-10
+        py-16
+        max-sm:px-6
+        max-sm:py-12;
+}
+
+/* Container principal */
+.footer__container {
+  @apply grid
+        grid-cols-5
+        gap-10
+        w-full
+        max-w-7xl
+
+        max-xl:grid-cols-4
+        max-lg:grid-cols-3
+        max-md:grid-cols-2
+        max-sm:grid-cols-1;
+}
+
+/* Logo */
+.footer__logo {
+  @apply bg-white/90
+        p-2
+        w-32
+        flex
+        items-center
+        justify-center
+        rounded-lg
+        mb-4;
+}
+
+.footer__logo img {
+  @apply w-full h-full object-contain;
+}
+
+/* Coluna 1 */
+.footer__colum-1 p {
+  @apply text-gray-300
+        text-sm
+        leading-relaxed
+        max-w-xs
+        max-sm:max-w-full;
+}
+
+/* Títulos */
+.footer__colum-2 h3,
+.footer__colum-3 h3,
+.footer__colum-4 h3,
+.footer__colum-5 h3 {
+  @apply uppercase
+        mb-3
+        text-sm
+        font-semibold
+        tracking-wider
+        text-white;
+}
+
+/* Listas */
+.footer__colum-2 ul,
+.footer__colum-3 ul,
+.footer__colum-4 ul {
+  @apply flex
+        flex-col
+        gap-2
+        text-sm
+        text-gray-400;
+}
+
+/* Links */
+.footer__colum-2 ul li a,
+.footer__colum-4 ul li a {
+  @apply transition-colors
+        duration-200
+        hover:text-purple-400;
+}
+
+/* Contato */
+.footer__colum-3 ul li {
+  @apply flex
+        items-center
+        gap-2;
+}
+
+/* Redes sociais */
+.footer__social {
+  @apply flex
+        gap-4
+        text-xl
+        text-gray-300;
+}
+
+.footer__social a {
+  @apply transition
+        duration-200
+        hover:text-purple-400
+        hover:scale-110;
+}
+
+/* Copyright */
+.footer__copyright {
+  @apply w-full
+        max-w-7xl
+        border-t
+        border-purple-800
+        text-gray-400
+        text-sm
+        mt-12
+        pt-6
+        flex
+        items-center
+        justify-between
+
+        max-md:flex-col
+        max-md:gap-2
+        max-md:text-center;
+}
