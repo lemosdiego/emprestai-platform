@@ -17,7 +17,7 @@
         to-white/50
         min-h-screen
         
-        max-sm:p-5
+        max-sm:p-0
         
         max-md:p-8
         
@@ -27,7 +27,7 @@
   @apply w-300
         grid
         grid-cols-[0.7fr_2fr]
-        bg-white/70
+        bg-white
         rounded
         shadow-2xs
         
