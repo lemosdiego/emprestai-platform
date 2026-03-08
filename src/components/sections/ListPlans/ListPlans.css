@@ -1,0 +1,67 @@
+@import "tailwindcss";
+.listPlans__section {
+  @apply border-8
+        bg-[url('https://res.cloudinary.com/dkrpmbjml/image/upload/v1772552420/emprestai_ssrjca.jpg')] 
+        bg-cover 
+        bg-center 
+        bg-no-repeat;
+}
+.listPlans-section__bg {
+  @apply flex 
+        items-center 
+        justify-center 
+        p-24
+        pb-0 bg-linear-to-br 
+        from-purple-300/95 
+        via-purple-50/80 
+        to-black/50
+        h-200;
+}
+.listPlans-section__container {
+  @apply border-2
+        w-350
+        grid
+        grid-cols-[1fr_2fr];
+}
+.listPlans-section__aside {
+  @apply border;
+}
+.listPlans-section-aside__container {
+  @apply bg-white 
+        rounded-2xl 
+        shadow-sm 
+        border 
+        border-gray-200 
+        p-6;
+}
+.listPlans-section__plans {
+  @apply border;
+}
+.listPlans-section-plans__text {
+  @apply border
+        flex
+        justify-between
+        p-5
+        bg-purple-400;
+}
+.listPlans-section-plans__text h2 {
+  @apply text-2xl
+        text-gray-800;
+}
+.listPlans-section-plans__text span {
+  @apply text-lg
+        text-gray-500;
+}
+.listPlans-section-plans__cards {
+  @apply border
+        grid
+        grid-cols-3
+        gap-3;
+}
+.listPlans-section-plans__pagination {
+  @apply flex
+        justify-center
+        items-center
+        gap-2
+        mt-6;
+}
