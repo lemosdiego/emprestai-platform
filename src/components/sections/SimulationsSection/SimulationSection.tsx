@@ -40,12 +40,12 @@ export default function SimulationSection() {
   };
 
   useEffect(() => {
-    if (simulacao) {
+    if (simulacao && salarioBruto) {
       navigate("/plans", {
-        state: simulacao,
+        state: { ...simulacao, salarioBruto },
       });
     }
-  }, [simulacao, navigate]);
+  }, [simulacao, navigate, salarioBruto]);
 
   return (
     <section id="simulacao" className="simulation__section">
