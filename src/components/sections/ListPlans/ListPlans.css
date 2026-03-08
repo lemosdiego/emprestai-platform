@@ -1,7 +1,6 @@
 @import "tailwindcss";
 .listPlans__section {
-  @apply border-8
-        bg-[url('https://res.cloudinary.com/dkrpmbjml/image/upload/v1772552420/emprestai_ssrjca.jpg')] 
+  @apply bg-[url('https://res.cloudinary.com/dkrpmbjml/image/upload/v1772552420/emprestai_ssrjca.jpg')] 
         bg-cover 
         bg-center 
         bg-no-repeat;
@@ -11,57 +10,191 @@
         items-center 
         justify-center 
         p-24
-        pb-0 bg-linear-to-br 
-        from-purple-300/95 
-        via-purple-50/80 
-        to-black/50
-        h-200;
+         
+        bg-linear-to-bl 
+        from-purple-900
+        via-purple-200/80 
+        to-white/50
+        min-h-screen
+        
+        max-sm:p-5
+        
+        max-md:p-8
+        
+        max-lg:p-10;
 }
 .listPlans-section__container {
-  @apply border-2
-        w-350
+  @apply w-300
         grid
-        grid-cols-[1fr_2fr];
+        grid-cols-[0.7fr_2fr]
+        bg-white/70
+        rounded
+        shadow-2xs
+        
+        max-md:grid-cols-1
+        max-md:w-full
+        max-md:mt-14
+        
+        max-lg:grid-cols-[1.5fr_2fr]
+        
+        max-xl:grid-cols-[1fr_2fr];
 }
+/* Coluna da Esquerda: Perfil e Resumo */
 .listPlans-section__aside {
-  @apply border;
 }
 .listPlans-section-aside__container {
-  @apply bg-white 
-        rounded-2xl 
-        shadow-sm 
-        border 
-        border-gray-200 
-        p-6;
+  @apply p-6
+        flex
+        flex-col
+        gap-3;
 }
+.listPlans-section-aside-container__header {
+  @apply flex
+      flex-col
+      gap-2
+      justify-center
+      border-b
+      border-gray-200
+      pb-2;
+}
+.listPlans-section-aside-container__header p {
+  @apply text-base 
+      text-gray-700;
+}
+.listPlans-section-aside-container__header h1 {
+  @apply text-3xl 
+      font-bold 
+      text-gray-900
+      capitalize;
+}
+.listPlans-section-aside-container__header span {
+  @apply rounded-xl
+      p-1.5
+      text-center 
+      text-sm 
+      font-medium 
+      bg-green-100 
+      text-green-800;
+}
+.listPlans-section-aside-container__body {
+  @apply flex
+        flex-col
+        gap-3;
+}
+
+/* Classes do componente de filtro */
+.listPlans-section-aside-container-body-filter__container {
+  @apply flex
+        flex-col
+        gap-2;
+}
+.listPlans-section-aside-container-body-filter-container__limit {
+  @apply flex
+        flex-col
+        gap-2;
+}
+.listPlans-section-aside-container-body-filter-container__limit h4 {
+  @apply text-base 
+      font-semibold 
+      text-gray-400 
+      uppercase;
+}
+.listPlans-section-aside-container-body-filter-container__limit p {
+  @apply text-xl 
+      font-bold 
+      text-green-600;
+}
+.listPlans-section-aside-container-body-filter__container input {
+  @apply w-full 
+      bg-gray-200 
+      rounded-lg 
+      appearance-none 
+      cursor-pointer 
+      accent-purple-600;
+}
+.listPlans-section-aside-container-body-filter-container__limit-range {
+  @apply flex 
+        justify-between 
+        text-base 
+        text-blue-400;
+}
+/* ================ */
+.listPlans-section-aside-container-body__filter button {
+  @apply bg-blue-500
+          text-base
+          p-2
+          text-white
+          rounded-xl
+          w-full
+          hover:bg-blue-700
+          transition-colors
+          mt-3
+          cursor-pointer
+          
+          max-sm:w-full
+          
+          max-md:w-80;
+}
+
+.listPlans-section-aside-container-body__status h4 {
+  @apply text-base 
+      font-semibold 
+      text-gray-400 
+      uppercase
+      mt-3;
+}
+.listPlans-section-aside-container-body__status p {
+  @apply text-xl 
+      font-bold 
+      text-purple-400;
+}
+.listPlans-section-aside-container__footer {
+  @apply border-b
+        border-gray-200
+        pb-2;
+}
+.listPlans-section-aside-container__footer a {
+  @apply block 
+        w-full 
+        text-lg
+        text-purple-900 
+        hover:text-gray-700 
+        font-medium 
+        transition-colors;
+}
+/* Coluna da Direita: Lista de Planos */
 .listPlans-section__plans {
-  @apply border;
+  @apply p-6
+  
+        max-sm:p-5;
 }
 .listPlans-section-plans__text {
-  @apply border
-        flex
+  @apply flex
         justify-between
         p-5
-        bg-purple-400;
+        bg-blue-400
+        mb-4
+        rounded-xl;
 }
 .listPlans-section-plans__text h2 {
   @apply text-2xl
-        text-gray-800;
-}
-.listPlans-section-plans__text span {
-  @apply text-lg
-        text-gray-500;
+        text-white
+        
+        max-lg:text-lg
+        
+        max-xl:text-xl;
 }
 .listPlans-section-plans__cards {
-  @apply border
-        grid
+  @apply grid
         grid-cols-3
-        gap-3;
+        gap-3
+        
+        max-sm:grid-cols-1
+
+        max-lg:grid-cols-2;
 }
 .listPlans-section-plans__pagination {
   @apply flex
-        justify-center
-        items-center
         gap-2
         mt-6;
 }

@@ -100,58 +100,32 @@ export default function ListPlans() {
             {/* Coluna da Esquerda: Perfil e Resumo */}
             <aside className="listPlans-section__aside">
               <div className="listPlans-section-aside__container">
-                <div className="mb-6 border-b border-gray-100 pb-6">
-                  <p className="text-sm text-gray-500 mb-1">Bem-vindo(a),</p>
-                  <h1 className="text-2xl font-bold text-gray-900 break-words">
-                    {dados?.nome}
-                  </h1>
-                  <div className="mt-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    Análise Aprovada
-                  </div>
-                </div>
+                <header className="listPlans-section-aside-container__header">
+                  <p>Bem-vindo(a),</p>
+                  <h1>{dados?.nome}</h1>
+                  <span>Análise Aprovada</span>
+                </header>
 
-                <div className="space-y-5">
-                  <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
-                      Salário Líquido
-                    </p>
-                    <p className="text-lg font-medium text-gray-700">
-                      {dados?.salarioLiquido?.toLocaleString("pt-BR", {
-                        style: "currency",
-                        currency: "BRL",
-                      })}
-                    </p>
-                  </div>
-
-                  <div>
+                <div className="listPlans-section-aside-container__body">
+                  <div className="listPlans-section-aside-container-body__filter">
                     <LimitFilter
                       maxLimit={initialDados?.limiteTotal || 0}
                       currentLimit={limit}
                       onLimitChange={setLimit}
                     />
-                    <button
-                      onClick={handleCalculate}
-                      className="w-full mt-4 py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-colors shadow-sm"
-                    >
+                    <button onClick={handleCalculate} className="">
                       Calcular
                     </button>
                   </div>
 
-                  <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
-                      Classificação
-                    </p>
-                    <p className="text-lg font-bold text-purple-600">
-                      {dados?.faixa}
-                    </p>
+                  <div className="listPlans-section-aside-container-body__status">
+                    <h4>Classificação</h4>
+                    <p>{dados?.faixa}</p>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <Link
-                    to="/"
-                    className="block w-full text-center text-sm text-gray-500 hover:text-purple-600 font-medium transition-colors"
-                  >
+                <div className=" listPlans-section-aside-container__footer">
+                  <Link to="/" className="">
                     ← Nova simulação
                   </Link>
                 </div>
@@ -162,7 +136,6 @@ export default function ListPlans() {
             <div className="flex-1 listPlans-section__plans">
               <div className="listPlans-section-plans__text">
                 <h2>Ofertas Disponíveis</h2>
-                <span>{dados?.planos?.length} opções encontradas</span>
               </div>
 
               <div className="listPlans-section-plans__cards">
@@ -282,18 +255,17 @@ function ListPlansSkeleton() {
 
       {/* Coluna da Direita: Lista de Planos Skeleton */}
       <div className="flex-1 listPlans-section__plans">
-        <div className="listPlans-section-plans__text mb-4 rounded-t-2xl border-b-0">
+        <div className="listPlans-section-plans__text ">
           <Skeleton width={200} height={32} />
-          <Skeleton width={150} height={24} />
         </div>
 
         <div className="listPlans-section-plans__cards">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col h-full"
+              className="bg-white rounded-xl shadow-sm border-gray-200 p-4 flex flex-col h-full border-4"
             >
-              <div className="flex justify-between items-center mb-2">
+              <div className="justify-between items-center ">
                 <Skeleton width={80} height={20} borderRadius={999} />
                 <Skeleton width={100} height={14} />
               </div>
