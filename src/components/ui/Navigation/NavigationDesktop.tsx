@@ -7,19 +7,19 @@ export default function NavigationDesktop({
     <nav className="max-md:hidden flex items-center gap-8 max-lg:gap-4">
       <a
         href="#como-funciona"
-        className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
+        className={`font-medium hover:text-purple-950 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
       >
         Como funciona
       </a>
       <a
         href="#beneficios"
-        className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
+        className={`font-medium hover:text-purple-950 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
       >
         Vantagens
       </a>
       <a
         href="#faq"
-        className={`font-medium hover:text-purple-600 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
+        className={`font-medium hover:text-purple-950 transition-colors ${isScrolled ? "text-gray-700" : "text-white drop-shadow-md"}`}
       >
         Dúvidas
       </a>

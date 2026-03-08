@@ -26,13 +26,14 @@ export default function Pagination({
   };
 
   return (
-    <div className="listPlans-section-plans__pagination flex items-center gap-2 justify-center mt-4">
+    <div className="listPlans-section-plans__pagination gap-2 mt-4 ">
       <button
         type="button"
         onClick={goToPrevious}
         disabled={currentPage === 1}
         aria-label="Página anterior"
-        className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-purple-600"
+        className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed  transition-colors text-purple-600
+        cursor-pointer"
       >
         <MdChevronLeft size={24} />
       </button>
@@ -43,7 +44,7 @@ export default function Pagination({
           type="button"
           onClick={() => onPageChange(page)}
           aria-label={`Ir para página ${page}`}
-          className={`w-10 h-10 rounded-lg font-bold transition-colors ${
+          className={`w-10 h-10 rounded-lg font-bold transition-colors cursor-pointer ${
             currentPage === page
               ? "bg-purple-600 text-white shadow-md"
               : "text-gray-600 hover:bg-gray-100"
@@ -58,7 +59,8 @@ export default function Pagination({
         onClick={goToNext}
         disabled={currentPage === totalPages}
         aria-label="Próxima página"
-        className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-purple-600"
+        className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-purple-600
+        cursor-pointer"
       >
         <MdChevronRight size={24} />
       </button>

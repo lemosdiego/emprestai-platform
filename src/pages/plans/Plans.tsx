@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import FAQ from "../../components/sections/FAQ/FAQ";
+
 import ListPlans from "../../components/sections/ListPlans/ListPlans";
 
 export default function Plans() {
@@ -8,7 +8,6 @@ export default function Plans() {
   return (
     <main>
       <ListPlans />
-      <FAQ />
     </main>
   );
 }
