@@ -30,15 +30,10 @@ export default function LimitFilter({
   };
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-end mb-2">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-          Limite Pré-Aprovado
-        </p>
-
-        <p className="text-xl font-bold text-green-600">
-          {formatCurrency(currentLimit)}
-        </p>
+    <div className=" listPlans-section-aside-container-body-filter__container">
+      <div className="listPlans-section-aside-container-body-filter-container__limit">
+        <h4>Limite Pré-Aprovado</h4>
+        <p>{formatCurrency(currentLimit)}</p>
       </div>
 
       <input
@@ -50,11 +45,10 @@ export default function LimitFilter({
         onChange={handleChange}
         onMouseUp={handleCommit}
         onTouchEnd={handleCommit}
-        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
         aria-label="Selecionar limite de empréstimo"
       />
 
-      <div className="flex justify-between text-xs text-gray-400 mt-1">
+      <div className=" listPlans-section-aside-container-body-filter-container__limit-range">
         <span>{formatCurrency(0)}</span>
         <span>{formatCurrency(maxLimit)}</span>
       </div>
