@@ -44,18 +44,22 @@
 }
 .benefits-section__text h2 {
   @apply text-4xl
+        w-[60%]
   
-        max-sm:text-3xl;
+        max-sm:text-3xl
+        
+        max-xl:w-[75%];
 }
 .benefits-section__text p {
-  @apply text-2xl
+  @apply text-xl
         mt-3
-        w-[90%]
+        w-[60%]
         max-sm:text-lg
         max-sm:w-full
         
-        max-lg:text-xl
-        max-lg:w-4/5;
+        max-lg:w-4/5
+        
+        max-xl:w-[75%];
 }
 .benefits-section__text a {
   @apply text-xl
