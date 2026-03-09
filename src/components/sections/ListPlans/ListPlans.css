@@ -25,22 +25,28 @@
 }
 .listPlans-section__container {
   @apply w-300
+        min-h-150
         grid
         grid-cols-[0.7fr_2fr]
         bg-white
         rounded
         shadow-2xs
+
+        max-sm:mt-17
         
         max-md:grid-cols-1
         max-md:w-full
-        max-md:mt-14
+        max-lg:mt-10
         
-        max-lg:grid-cols-[1.5fr_2fr]
+        max-lg:grid-cols-[1.2fr_2fr]
+        max-lg:h-auto
         
         max-xl:grid-cols-[1fr_2fr];
 }
 /* Coluna da Esquerda: Perfil e Resumo */
 .listPlans-section__aside {
+  @apply border-r
+        border-gray-200;
 }
 .listPlans-section-aside__container {
   @apply p-6
@@ -62,7 +68,7 @@
       text-gray-700;
 }
 .listPlans-section-aside-container__header h1 {
-  @apply text-3xl 
+  @apply text-2xl 
       font-bold 
       text-gray-900
       capitalize;
@@ -171,18 +177,16 @@
 .listPlans-section-plans__text {
   @apply flex
         justify-between
-        p-5
+        p-2.5
         bg-blue-400
         mb-4
         rounded-xl;
 }
 .listPlans-section-plans__text h2 {
-  @apply text-2xl
+  @apply text-xl
         text-white
         
-        max-lg:text-lg
-        
-        max-xl:text-xl;
+        max-lg:text-lg;
 }
 .listPlans-section-plans__cards {
   @apply grid
