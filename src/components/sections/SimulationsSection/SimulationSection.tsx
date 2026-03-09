@@ -41,7 +41,7 @@ export default function SimulationSection() {
 
   useEffect(() => {
     if (simulacao && salarioBruto) {
-      navigate("/plans", {
+      navigate("/plans#plans", {
         state: { ...simulacao, salarioBruto },
       });
     }

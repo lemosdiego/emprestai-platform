@@ -91,7 +91,7 @@ export default function ListPlans() {
   }
 
   return (
-    <div className="listPlans__section">
+    <div className="listPlans__section" id="plans">
       <div className="listPlans-section__bg">
         {isLoading ? (
           <ListPlansSkeleton />
